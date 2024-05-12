@@ -1,0 +1,109 @@
+.calendar {
+  font-family: "Arial", sans-serif;
+  max-width: 50%;
+  max-height: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 0;
+  display: inline-block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.header-text {
+  font-size: 2rem;
+}
+
+.header button {
+  background: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.calendar-week-days,
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  border-collapse: collapse;
+  flex-grow: 1;
+}
+
+.calendar-week-days .calendar-day-name,
+.calendar-days-grid .calendar-day {
+  font-size: 1.5rem;
+  padding: 3rem;
+  border: 0.5px solid #e0e0e0;
+  background-color: #f9f9f9;
+  margin: 0;
+  border-radius: 0;
+}
+
+.calendar-days-grid .calendar-day {
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.calendar-days-grid .calendar-day:hover {
+  background-color: #d0d0d0;
+}
+
+.calendar-days-grid .calendar-day.today {
+  background-color: #007bff;
+}
+
+.calendar-days-grid .calendar-day.saturday {
+  background-color: #ff0000;
+  color: white;
+}
+
+.calendar-main-calendar-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Ensure holiday has the least priority */
+.calendar-days-grid .calendar-day.holiday:not(.today):not(.saturday) {
+  background-color: orange;
+}
+
+.calendar-days-grid .calendar-day.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+.holiday-marker {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.calendar-days-grid .calendar-day:hover .holiday-marker {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    font-size: 1.5rem;
+  }
+  .header {
+    padding: 0.8rem 1.6rem;
+  }
+  .calendar-week-days .calendar-day-name,
+  .calendar-days-grid .calendar-day {
+    padding: 0.4rem;
+  }
+}

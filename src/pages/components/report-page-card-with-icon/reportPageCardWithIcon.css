@@ -1,0 +1,18 @@
+.reportPageCardWithIconContainer {
+  max-width: 20rem;
+  min-width: 18rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, spread radius, color */
+  border-radius: 3px;
+}
+.LateStudentsIconSVG {
+  width: 8rem;
+  height: 8rem;
+}
+.StudentLostIconSVG {
+  width: 8rem;
+  height: 8rem;
+}
+.IDForgotIcon {
+  width: 8rem;
+  height: 8rem;
+}

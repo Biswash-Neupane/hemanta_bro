@@ -1,0 +1,30 @@
+.toolsPageContainer {
+  display: grid;
+  grid-template-columns: 0.7fr 3fr; /* Creates two columns, sidebar 1/4 and content 3/4 of the container width */
+  grid-template-rows: auto 1fr; /* Creates two rows, header height determined by content, and the second row taking up the remaining space */
+  gap: 10px; /* Adds a 10px gap between grid items */
+  height: 100vh; /* Sets the container height to be 100% of the viewport height */
+}
+
+.tools-page-header {
+  grid-column: 1 / -1; /* Spans the header across all columns */
+}
+
+.tools-page-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #333333;
+  margin-left: 0.8rem;
+}
+
+.toolsPageBody {
+  grid-row: 2;
+}
+.toolsPageSidebar {
+  grid-row: 2;
+}
+
+.toolsCard {
+  padding: 1rem;
+  width: calc(100% - 0.5rem);
+}

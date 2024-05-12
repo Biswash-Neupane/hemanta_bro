@@ -1,0 +1,8 @@
+/* CSS file for the HolidayMarker component */
+.iconButton:hover {
+  opacity: 0.7;
+}
+
+.iconButton {
+  transition: opacity 0.3s ease; /* Smooth transition for the hover effect */
+}

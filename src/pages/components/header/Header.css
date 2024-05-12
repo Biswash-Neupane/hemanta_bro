@@ -1,0 +1,66 @@
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 0 2rem; /* Adjust padding instead of margin for children */
+  height: auto; /* Responsive height */
+  overflow: visible;
+  padding: 0.5rem 1rem;
+  width: 100%; /* Ensure header takes full width */
+}
+
+.search-container {
+  flex-grow: 1;
+  margin: 0 2rem; /* Ensures SearchBar has space on both sides */
+}
+
+.notification-logout {
+  display: flex;
+  gap: 1rem;
+  /* margin-right: 2rem; Removed to use padding in .main-header */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: stretch; /* Align items stretch for vertical layout */
+  }
+  .search-container,
+  .notification-logout {
+    margin: 0.5rem 0; /* Adjust margin for compact layout */
+  }
+}
+
+/* Continue with your existing .search-results and other related CSS */
+
+.search-results {
+  position: absolute;
+  top: 8%;
+  left: 30%;
+  width: 40%;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 8px; /* Adds rounded corners */
+  padding: 10px 0; /* Adds some padding inside the container */
+  border: 1px solid #ddd; /* Adds a light border for subtle definition */
+}
+
+.search-results div {
+  padding: 10px 20px; /* Adds padding to each result for better spacing */
+  cursor: pointer; /* Changes the cursor to indicate clickable items */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.search-results div:hover {
+  background-color: #f0f0f0; /* Slightly changes the background on hover for visual feedback */
+}
+
+.search-results div:not(:last-child) {
+  border-bottom: 1px solid #eee; /* Adds a separator between items */
+}

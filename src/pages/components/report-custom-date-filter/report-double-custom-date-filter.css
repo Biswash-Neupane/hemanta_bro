@@ -1,0 +1,162 @@
+.date-range-calendar-wrapper {
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+.selected-date-range {
+  /* position: relative; */
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  transition: background-color 0.2s;
+  height: 1rem;
+}
+
+.selected-date-range:hover {
+  background-color: #e9e9e9;
+}
+.date-picker-container {
+  display: flex;
+  position: absolute;
+  top: 100%; /* Adjust if necessary based on the exact layout */
+  left: 0;
+  transform: translateY(10px); /* Optional: to create a small gap */
+  transform: translateX(100%);
+  background-color: #fff;
+  border: 1px solid #ccd0d5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.calendar {
+  flex: 1;
+  margin: 1px;
+  border-radius: 0.3rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+}
+
+.header button {
+  background: none;
+  width: 20%;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 0.85rem;
+}
+
+.header button:hover {
+  background-color: #e9e9e9;
+}
+
+.double-week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Creates 7 columns */
+  font-size: 0.7rem;
+  gap: 1px; /* You can adjust this value to manage the space between items */
+  background-color: #f7f7f7;
+  color: #333;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+.double-week-days .day-name,
+.double-days-grid .day {
+  padding: 5px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+.double-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Creates 7 columns */
+  gap: 1px; /* You can adjust this value to manage the space between items */
+  background-color: white;
+}
+
+.double-days-grid .day:last-child,
+.double-week-days .day-name:last-child {
+  border-right: none;
+}
+
+.double-days-grid .day:nth-child(7n),
+.double-week-days .day-name:nth-child(7n) {
+  border-right: none;
+}
+
+.double-days-grid .day {
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.double-days-grid .day:hover {
+  background-color: #f0f0f0;
+}
+
+.double-days-grid .day.selected {
+  background-color: #ff819e; /* Example selected color, match with your picture */
+  color: white;
+}
+
+.presets {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  /* padding: 10px; */
+
+  /* margin-bottom: 10px; */
+}
+
+.presets button {
+  /* flex: 1; */
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10%;
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.presets button:hover {
+  background-color: #e9e9e9;
+}
+
+.presets button.selected {
+  background-color: #ff819e; /* Example selected color, match with your picture */
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    display: block;
+    width: 100%;
+  }
+
+  .selected-date-range {
+    width: 100%;
+    text-align: center;
+  }
+
+  .presets button {
+    margin: 2px 0; /* Adjust spacing for smaller screens */
+  }
+}

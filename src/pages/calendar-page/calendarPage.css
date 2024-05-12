@@ -1,0 +1,24 @@
+.calendar-page-container {
+  display: grid;
+  grid-template-columns: 0.7fr 3fr; /* Creates two columns, sidebar 1/4 and content 3/4 of the container width */
+  grid-template-rows: auto 1fr; /* Creates two rows, header height determined by content, and the second row taking up the remaining space */
+  gap: 10px; /* Adds a 10px gap between grid items */
+  height: 100vh; /* Sets the container height to be 100% of the viewport height */
+}
+
+.calendar-page-header {
+  grid-column: 1 / -1; /* Spans the header across all columns */
+}
+
+.calendar-page-body {
+  margin-top: 1rem;
+  grid-row: 2;
+  /* flex-grow: 1; */
+}
+.calendar-page-sidebar {
+  grid-row: 2;
+  display: inline-block;
+}
+.calendar-main-calendar {
+  display: inline-block;
+}

@@ -1,0 +1,6 @@
+.reportPageCardContainer {
+  max-width: 20rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, spread radius, color */
+  border-radius: 3px;
+  margin-right: 70px;
+}

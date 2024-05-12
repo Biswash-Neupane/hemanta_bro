@@ -1,0 +1,41 @@
+/* live.css */
+.chat-container {
+  font-family: "Arial", sans-serif;
+  color: #f4f4f4;
+  background: #333;
+  padding: 10px;
+  height: 11.5rem;
+  overflow: scroll;
+}
+
+.chat-entry {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.chat-prefix,
+.chat-name,
+.chat-code,
+.chat-time {
+  margin-right: 10px;
+}
+
+.chat-name {
+  flex-grow: 1;
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.chat-cursor:after {
+  content: "_";
+  animation: blink 1s step-end infinite;
+}
+
+/* You might need to adjust this to only apply the blinking 
+to the last entry if it's supposed to represent the input cursor. */

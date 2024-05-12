@@ -1,0 +1,94 @@
+/* EditDetails.css */
+.EditDetailsBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.EditDetailsContainer {
+  width: auto;
+  max-width: 400px; /* Slightly reduced for a tighter look */
+  background: #fff;
+  border-radius: 10px; /* More pronounced rounded corners for a softer look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.EditDetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.EditDetailsHeaderText {
+  font-size: 1.4rem; /* Slightly smaller for a cleaner look */
+  font-weight: 600; /* Less bold */
+}
+
+.EditDetailsTabContainer {
+  display: flex;
+  margin-bottom: 15px; /* Added margin for spacing */
+}
+
+.EditDetailsTab {
+  padding: 8px 12px; /* Adjusted padding for a slimmer profile */
+  border: 1px solid #e1e1e1; /* Softer border color */
+  background-color: #f9f9f9; /* Lighter background for inactive tabs */
+  margin-right: 2px; /* Reduced spacing between tabs */
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem; /* Smaller font size for tabs */
+}
+
+.EditDetailsTab.active {
+  background-color: #fff;
+  border-color: #007bff;
+  border-bottom: 2px solid #007bff; /* More pronounced bottom border for active tab */
+  box-shadow: none; /* Removed inset shadow for a cleaner look */
+}
+
+.EditDetailsForm input,
+.EditDetailsForm select {
+  width: 100%;
+  padding: 8px; /* Slightly reduced padding */
+  margin-bottom: 8px; /* Reduced spacing between form elements */
+  border: 1px solid #dcdcdc; /* Softer border color */
+  border-radius: 4px; /* Uniform border-radius */
+  font-size: 0.9rem; /* Smaller font size for input text */
+}
+
+.EditDetailsForm input::placeholder {
+  color: #bbb; /* Lighter placeholder color */
+}
+
+.EditDetailsSubmit {
+  padding: 10px 15px;
+  background-color: #007bff; /* Simplified button background */
+  color: white;
+  font-weight: 500; /* Slightly less bold */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.EditDetailsSubmit:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-1px);
+}
+.SuperCardPopUpSearchBar {
+  position: relative;
+}
+.edit-details-search-results {
+  position: absolute;
+}

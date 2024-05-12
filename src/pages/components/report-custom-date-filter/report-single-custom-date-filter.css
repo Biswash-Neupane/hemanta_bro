@@ -1,0 +1,123 @@
+.single-date-picker-wrapper {
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.selected-date {
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.selected-date:hover {
+  background-color: #e9e9e9;
+}
+
+.single-date-picker-container {
+  display: flex;
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccd0d5;
+  transform: translateY(10px); /* Optional: to create a small gap */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.single-date-calendar {
+  margin: 1px;
+  border-radius: 0.3rem;
+}
+
+.single-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+}
+
+.single-header button {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 0.85rem;
+}
+
+.single-header button:hover {
+  background-color: #e9e9e9;
+}
+
+.single-week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Creates 7 columns */
+  font-size: 0.7rem;
+  gap: 1px; /* You can adjust this value to manage the space between items */
+  background-color: #f7f7f7;
+  color: #333;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+.single-week-days .single-day-name,
+.single-days-grid .single-day {
+  padding: 5px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  text-align: center;
+}
+
+.single-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Creates 7 columns */
+  gap: 1px; /* You can adjust this value to manage the space between items */
+  background-color: white;
+}
+
+.single-days-grid .single-day:last-child,
+.week-days .single-day-name:last-child {
+  border-right: 1px solid #e6e6e6;
+}
+
+.single-days-grid .single-day {
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.single-days-grid .single-day:hover {
+  background-color: #f0f0f0;
+}
+
+.single-days-grid .single-day.selected {
+  background-color: #ff819e;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .single-date-calendar {
+    display: block;
+    width: 100%;
+  }
+
+  .selected-date {
+    width: 100%;
+    text-align: center;
+  }
+}

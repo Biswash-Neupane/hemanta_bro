@@ -1,0 +1,52 @@
+/* Container for the Attendance Card */
+.attendance-card-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: auto;
+  margin-bottom: 1.5rem; /* Increased from 1rem */
+  padding: 1.2rem 1.5rem; /* Increased from 0.7rem */
+  background-color: #f8f8f8;
+  gap: 3rem; /* Increased from 2rem */
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* Increased shadow size and opacity */
+}
+
+/* Header section of the card */
+.attendance-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem; /* Increased from 0.2rem */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title style */
+.attendance-card-title {
+  font-size: 1.5em; /* Increased from 1.2em */
+  font-weight: 400;
+  color: #084b83;
+}
+
+/* Value (number of attendees, etc.) */
+.attendance-card-value {
+  font-size: 2.25em; /* Increased from 1.5em */
+  color: #000000;
+  font-weight: 400;
+}
+
+/* Trend information (up or down) */
+.attendance-card-trend {
+  display: flex;
+  gap: 0.3rem; /* Increased from 0.2rem */
+  color: #ff4141;
+  font-size: 1.05em; /* Increased from 0.7em */
+}
+
+/* Style for the downward arrow icon */
+.downward-arrow {
+  width: 1.5em; /* Increased from 1em */
+  height: 1.5em; /* Increased from 1em */
+  display: inline-block;
+  margin: auto;
+}

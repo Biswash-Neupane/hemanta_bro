@@ -1,0 +1,109 @@
+.RankByAttendanceBackdrop {
+  position: fixed; /* Full screen backdrop */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above other content */
+}
+.RankByAttendancePopUpContainer {
+  width: auto; /* Adjust width as needed */
+  max-width: 500px; /* Maximum width to maintain layout integrity */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Padding to ensure content does not touch the edges */
+  display: flex;
+  flex-direction: column;
+}
+
+.RankByAttendancePopUpHeader {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(134, 134, 134);
+}
+
+.attendance-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.order-toggle {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.rank-by-table-container {
+  max-height: 40vh;
+  overflow: scroll;
+}
+
+.attendance-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.attendance-table th {
+  background-color: #f2f2f2;
+}
+
+.attendance-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.RankByAttendanceFilters {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.RankByAttendanceFiltersRow1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.RankByAttendanceFiltersRow2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.RankByAttendanceFilters select {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.RankByAttendanceOrderButtons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.order-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button.active {
+  background-color: #007bff;
+  color: white;
+}

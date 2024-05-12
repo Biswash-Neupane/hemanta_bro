@@ -1,0 +1,76 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 20rem; /* Responsive width, max-width for larger screens */
+  padding: 2rem 3rem 5rem 3rem;
+  border: 1px solid #ddd;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+  font-size: 1.5rem; /* Responsive font size */
+}
+
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.3125rem;
+  font-size: 1rem; /* Responsive font size */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem; /* Ensuring input text size is responsive */
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.625rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem; /* Responsive font size */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments for smartphones */
+@media (max-width: 600px) {
+  .login-form {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.25rem;
+  }
+
+  .input-group label,
+  .input-group input,
+  button {
+    font-size: 0.9rem;
+  }
+}

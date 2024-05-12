@@ -1,0 +1,24 @@
+/* StudentAttendanceTable.css */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.attendance-table thead {
+  background-color: #f2f2f2;
+}
+
+.checkmark {
+  color: green;
+}
+
+.crossmark {
+  color: red;
+}

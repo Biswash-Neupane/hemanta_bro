@@ -1,0 +1,155 @@
+.sidebar {
+  margin-top: 1rem;
+  max-width: 10rem;
+  height: 80vh;
+  background: #fff;
+  padding: 2rem; /* Increase padding for more space */
+  border-radius: 1rem; /* Larger border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust shadow for subtle effect */
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  position: relative; /* Position the edit button */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  gap: 0.3rem;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  font-size: 1.5rem; /* Increase logo size */
+  font-weight: bold;
+  color: #333; /* Darker color for contrast */
+}
+
+.school-profile-picture {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.school-name {
+  font-size: 1.5rem;
+}
+.school-id {
+  color: #999999;
+  font-size: 1rem;
+}
+.edit-btn {
+  position: absolute;
+  left: 70%;
+  background: transparent;
+  color: #ff8e76;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem; /* Increase padding for larger button */
+  cursor: pointer;
+}
+.stats-box {
+  position: relative;
+}
+
+.stats-box::before {
+  content: "";
+  position: absolute;
+  top: -1rem; /* Extend 2rem above the element */
+  left: -2rem; /* Extend 2rem to the left */
+  right: -2rem; /* Extend 2rem to the right */
+  height: calc(
+    4.5rem + 2px
+  ); /* Height to span top and bottom borders, including their thickness */
+  border-top: 1px solid #c2c2c2; /* Top border */
+  border-bottom: 1px solid #c2c2c2; /* Bottom border */
+  box-sizing: border-box;
+}
+.stats {
+  display: grid; /* Use grid for equal spacing */
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 1rem; /* Space between grid items */
+  margin-bottom: 1rem;
+}
+.stats-students-title,
+.stats-staffs-title {
+  font-size: 1.2rem;
+  color: #084b83;
+}
+.students {
+  position: relative; /* Increase space below stats */
+}
+
+.students::after {
+  content: "";
+  position: absolute;
+  right: 0; /* Positioned at the right edge of the .students */
+  top: -1rem; /* Start from the top */
+  bottom: calc(-1rem + 10px); /* Stretch to the bottom */
+  width: 1px; /* Width of the divider line */
+  background-color: #c2c2c2; /* Color of the line */
+  box-sizing: border-box;
+}
+.students,
+.staff {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.2rem; /* Larger font size */
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.navigation a {
+  padding: 1rem; /* Increase padding for larger tap area */
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem; /* Larger font size for links */
+  display: flex; /* Flex to align icons and text */
+  align-items: center; /* Center items vertically */
+  gap: 1rem; /* Space between icon and text */
+}
+
+.icon {
+  margin-right: 8px; /* Space between icon and text */
+  width: 20px; /* Set width for icons */
+  height: 20px; /* Set height for icons */
+}
+
+.navigation a.active,
+.navigation a.active svg path,
+.navigation a.active svg rect,
+.navigation a.active svg line {
+  color: #ff527a; /* Change color of text */
+  stroke: #ff527a; /* Change SVG stroke color for path, rect, and line */
+}
+
+/* SVG styles */
+/* svg {
+  width: 25px;
+  height: 25px;
+} */
+
+.new-btn {
+  background: #4caf50; /* Match the color in the image */
+  color: #fff;
+  border: none;
+  padding: 1rem; /* Increase padding for a bigger button */
+  border-radius: 0.5rem; /* Rounded corners for the button */
+  margin-top: auto; /* Push the button to the bottom */
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold; /* Bold font for the button text */
+}
+
+/* Hover states for buttons and links */
+.edit-btn:hover,
+.new-btn:hover,
+.navigation a:hover {
+  opacity: 0.7; /* Subtle hover effect */
+}

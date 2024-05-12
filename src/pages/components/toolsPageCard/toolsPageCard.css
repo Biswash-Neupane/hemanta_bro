@@ -1,0 +1,75 @@
+/* ManualAttendanceCard.css */
+.manualAttendanceToolsPageIcon,
+.SuperCardIcon,
+.EditDetailsIcon,
+.ShoppingCartIcon,
+.AttendanceRankingIcon,
+.RefreshIcon,
+.CloseIcon {
+  width: 4rem;
+  height: 4rem;
+  color: #595959; /* Slightly gray color applied */
+}
+
+.SuperCardCancel,
+.SuperCardAdd {
+  width: 2rem;
+  height: 2rem;
+  color: #595959; /* Slightly gray color applied */
+}
+
+.toolsPageCard {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  margin: 1rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  /* Updated box-shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.content {
+  flex: 1;
+  color: #595959; /* Slightly gray color applied */
+}
+
+.title {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #595959; /* Slightly gray color applied */
+}
+
+.description {
+  font-size: 1rem;
+  margin: 0;
+  color: #595959; /* Slightly gray color applied */
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .icon {
+    margin-bottom: 0.5rem;
+    color: #595959; /* Slightly gray color applied for consistency */
+  }
+
+  .title {
+    font-size: 1rem;
+    color: #595959; /* Ensuring gray color is applied */
+  }
+
+  .description {
+    font-size: 0.875rem;
+    color: #595959; /* Ensuring gray color is applied */
+  }
+}

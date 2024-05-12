@@ -1,0 +1,19 @@
+.report-page-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Creates two columns, sidebar 1/4 and content 3/4 of the container width */
+  grid-template-rows: auto 1fr; /* Creates two rows, header height determined by content, and the second row taking up the remaining space */
+  gap: 10px; /* Adds a 10px gap between grid items */
+  height: 100vh; /* Sets the container height to be 100% of the viewport height */
+}
+
+.report-page-header {
+  grid-column: 1 / -1; /* Spans the header across all columns */
+}
+
+.report-page-sidebar {
+  grid-row: 2; /* Positions the sidebar in the second row */
+}
+
+.report-page-body {
+  grid-row: 2; /* Positions the content in the second row */
+}
